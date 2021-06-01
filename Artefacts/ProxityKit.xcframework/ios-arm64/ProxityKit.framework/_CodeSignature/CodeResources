@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ProxityKit-Swift.h</key>
 		<data>
-		1ZoPdP5yxLIxEn6BNNre3tnnw+s=
+		Uhb/vKvzITQRBUnM1WlCmsdX4rg=
 		</data>
 		<key>Headers/ProxityKit.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+OrNUENjaud9GQAlGgecUpD3YoU=
+		q0Whs3nDiHeLGV6en1Qs0eYmORE=
 		</data>
 		<key>Modules/ProxityKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		rz9uEk1X4AynH2+1/CrqkowYQhY=
+		gIE8IWGO87YZU+Oc1OpNRLlp3as=
 		</data>
 		<key>Modules/ProxityKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		pItyihfX+GysHdbpIKscIQdK1FM=
+		sg/+915ecV1fklP0AM7lhAgsoU4=
 		</data>
 		<key>Modules/ProxityKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		F25OCsW6Td6mj+yp1n+Y4n3O9Gw=
+		tz9tNqZwvBH7Uxury+CRQA5kGyw=
 		</data>
 		<key>Modules/ProxityKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		rz9uEk1X4AynH2+1/CrqkowYQhY=
+		gIE8IWGO87YZU+Oc1OpNRLlp3as=
 		</data>
 		<key>Modules/ProxityKit.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		pItyihfX+GysHdbpIKscIQdK1FM=
+		sg/+915ecV1fklP0AM7lhAgsoU4=
 		</data>
 		<key>Modules/ProxityKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		F25OCsW6Td6mj+yp1n+Y4n3O9Gw=
+		tz9tNqZwvBH7Uxury+CRQA5kGyw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qfkHOfd3uS8NPu32jwDFpNXhUUX2PBgtr14wCsUhlyk=
+			lSAzDZm9qaaXofmrQjRhjaWR7vn/uDUM64H4YVDLwmQ=
 			</data>
 		</dict>
 		<key>Headers/ProxityKit.h</key>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOdufDr/lSJ29+07x3pzNC2Er9nfC2L1OoO+wlG0uww=
+			plQH8RD2vRh1a8+Q4EJOEssvBiaikV/34CLMfFpHA60=
 			</data>
 		</dict>
 		<key>Modules/ProxityKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OmfjC8y4X+w3YkQpovq6IkPtNG0NxhSZaoiAMO7o7Tk=
+			nYajqZSNsRINW9eMulYvkYtmOSPpcN5qbimSt/iyV5w=
 			</data>
 		</dict>
 		<key>Modules/ProxityKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mEMXYEqgZgApWVUFqyG7Y4NHGm6q4PI0mDHX8rTWL+Y=
+			hjESwNwNdAOAMsqqk2v3tvENSFmnM3NOu66S7NnrZvQ=
 			</data>
 		</dict>
 		<key>Modules/ProxityKit.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOdufDr/lSJ29+07x3pzNC2Er9nfC2L1OoO+wlG0uww=
+			plQH8RD2vRh1a8+Q4EJOEssvBiaikV/34CLMfFpHA60=
 			</data>
 		</dict>
 		<key>Modules/ProxityKit.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OmfjC8y4X+w3YkQpovq6IkPtNG0NxhSZaoiAMO7o7Tk=
+			nYajqZSNsRINW9eMulYvkYtmOSPpcN5qbimSt/iyV5w=
 			</data>
 		</dict>
 		<key>Modules/ProxityKit.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mEMXYEqgZgApWVUFqyG7Y4NHGm6q4PI0mDHX8rTWL+Y=
+			hjESwNwNdAOAMsqqk2v3tvENSFmnM3NOu66S7NnrZvQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
