@@ -9,7 +9,7 @@ import Swift
 public typealias Callback = (ProxityKit.Client, [Swift.String]) -> Swift.Void
 public typealias Logger = (Swift.String) -> Swift.Void
 public class Client {
-  public init?(apiKey: Swift.String, deviceId: Foundation.UUID, locationManager: CoreLocation.CLLocationManager, messageCallback: ProxityKit.Callback? = nil, webhookCallback: ProxityKit.Callback? = nil, logger: ProxityKit.Logger? = nil, recreateDatabase: Swift.Bool = false)
+  public init?(apiKey: Swift.String, deviceId: Foundation.UUID, locationManager: CoreLocation.CLLocationManager, backend: Foundation.URL = URL(string: "https://api.proxity.eu")!, messageCallback: ProxityKit.Callback? = nil, webhookCallback: ProxityKit.Callback? = nil, logger: ProxityKit.Logger? = nil, recreateDatabase: Swift.Bool = false)
   public func start()
   public func stop()
   public func processBeacons(_ rangedBeacons: [CoreLocation.CLBeacon], location: CoreLocation.CLLocation?)
