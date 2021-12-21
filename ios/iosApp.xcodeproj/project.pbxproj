@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		A2151270277223670020CA10 /* ProxityKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28CF3E22770D0560053B2AE /* ProxityKit.xcframework */; };
-		A2151271277223670020CA10 /* ProxityKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A28CF3E22770D0560053B2AE /* ProxityKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2D3D1DE2772382800D75E89 /* ProxityKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D3D1DD2772382800D75E89 /* ProxityKit.xcframework */; };
+		A2D3D1DF2772382800D75E89 /* ProxityKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2D3D1DD2772382800D75E89 /* ProxityKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A2151272277223670020CA10 /* Embed Frameworks */ = {
+		A2D3D1E02772382800D75E89 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A2151271277223670020CA10 /* ProxityKit.xcframework in Embed Frameworks */,
+				A2D3D1DF2772382800D75E89 /* ProxityKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +33,7 @@
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A28CF3E22770D0560053B2AE /* ProxityKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ProxityKit.xcframework; path = ../artefacts/ProxityKit.xcframework; sourceTree = "<group>"; };
+		A2D3D1DD2772382800D75E89 /* ProxityKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ProxityKit.xcframework; path = ../artifacts/ProxityKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2151270277223670020CA10 /* ProxityKit.xcframework in Frameworks */,
+				A2D3D1DE2772382800D75E89 /* ProxityKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +78,7 @@
 		7555FFB0242A642200829871 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2D3D1DD2772382800D75E89 /* ProxityKit.xcframework */,
 				A28CF3E22770D0560053B2AE /* ProxityKit.xcframework */,
 			);
 			name = Frameworks;
@@ -92,7 +94,7 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF78242A565900829871 /* Frameworks */,
 				7555FF79242A565900829871 /* Resources */,
-				A2151272277223670020CA10 /* Embed Frameworks */,
+				A2D3D1E02772382800D75E89 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,9 +288,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -307,9 +307,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

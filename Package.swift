@@ -15,7 +15,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ProxityKit",
-            path: "artefacts/ProxityKit.xcframework"
+            path: "artifacts/ProxityKit.xcframework"
         ),
     ]
 )
