@@ -222,7 +222,7 @@ __attribute__((swift_name("Platform")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (ProxityKitLong * _Nullable)getFileLastModifiedId:(NSString *)id __attribute__((swift_name("getFileLastModified(id:)")));
-- (NSString * _Nullable)writeImageId:(NSString *)id bytes:(ProxityKitKotlinByteArray *)bytes __attribute__((swift_name("writeImage(id:bytes:)")));
+- (NSString *)writeImageId:(NSString *)id bytes:(ProxityKitKotlinByteArray *)bytes __attribute__((swift_name("writeImage(id:bytes:)")));
 @property (readonly) int64_t epoch __attribute__((swift_name("epoch")));
 @property (readonly) NSString *lang __attribute__((swift_name("lang")));
 @property (readonly) NSString *platform __attribute__((swift_name("platform")));
