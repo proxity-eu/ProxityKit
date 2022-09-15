@@ -1,0 +1,8 @@
+framework module ProxityKit {
+    umbrella header "ProxityKit.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

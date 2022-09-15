@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class ProxityKitLocationCompanion, ProxityKitLocation, ProxityKitTag, ProxityKitMessageCompanion, ProxityKitMessage, ProxityKitKotlinByteArray, ProxityKitProxityClient, ProxityKitPlatform, ProxityKitTagCompanion, ProxityKitCachedContent, ProxityKitGetMessagesSince, ProxityKitProxityDBCompanion, ProxityKitRuntimeQuery<__covariant RowType>, ProxityKitKotlinByteIterator, ProxityKitRuntimeTransacterTransaction, ProxityKitKotlinx_serialization_coreSerializersModule, ProxityKitKotlinx_serialization_coreSerialKind, ProxityKitKotlinNothing;
+@class ProxityKitLocationCompanion, ProxityKitLocation, ProxityKitProxityClient, ProxityKitProxityPlatform, ProxityKitKotlinByteArray, ProxityKitCachedContent, ProxityKitGetMessage, ProxityKitGetMessagesSince, ProxityKitProxityDBCompanion, ProxityKitRuntimeQuery<__covariant RowType>, ProxityKitKotlinByteIterator, ProxityKitRuntimeTransacterTransaction, ProxityKitKotlinx_serialization_coreSerializersModule, ProxityKitKotlinx_serialization_coreSerialKind, ProxityKitKotlinNothing;
 
 @protocol ProxityKitKotlinx_serialization_coreKSerializer, ProxityKitProxityDelegate, ProxityKitProxityQueries, ProxityKitRuntimeTransactionWithoutReturn, ProxityKitRuntimeTransactionWithReturn, ProxityKitRuntimeTransacter, ProxityKitProxityDB, ProxityKitRuntimeSqlDriver, ProxityKitRuntimeSqlDriverSchema, ProxityKitKotlinx_serialization_coreEncoder, ProxityKitKotlinx_serialization_coreSerialDescriptor, ProxityKitKotlinx_serialization_coreSerializationStrategy, ProxityKitKotlinx_serialization_coreDecoder, ProxityKitKotlinx_serialization_coreDeserializationStrategy, ProxityKitRuntimeTransactionCallbacks, ProxityKitRuntimeSqlPreparedStatement, ProxityKitRuntimeSqlCursor, ProxityKitRuntimeCloseable, ProxityKitRuntimeQueryListener, ProxityKitKotlinx_serialization_coreCompositeEncoder, ProxityKitKotlinAnnotation, ProxityKitKotlinx_serialization_coreCompositeDecoder, ProxityKitKotlinIterator, ProxityKitKotlinx_serialization_coreSerializersModuleCollector, ProxityKitKotlinKClass, ProxityKitKotlinKDeclarationContainer, ProxityKitKotlinKAnnotatedElement, ProxityKitKotlinKClassifier;
 
@@ -149,8 +149,8 @@ __attribute__((swift_name("Location")))
 @interface ProxityKitLocation : ProxityKitBase
 - (instancetype)initWithLatitude:(float)latitude longitude:(float)longitude __attribute__((swift_name("init(latitude:longitude:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) ProxityKitLocationCompanion *companion __attribute__((swift_name("companion")));
-- (float)component1 __attribute__((swift_name("component1()")));
-- (float)component2 __attribute__((swift_name("component2()")));
+- (float)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (float)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (ProxityKitLocation *)doCopyLatitude:(float)latitude longitude:(float)longitude __attribute__((swift_name("doCopy(latitude:longitude:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -170,76 +170,17 @@ __attribute__((swift_name("Location.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Message")))
-@interface ProxityKitMessage : ProxityKitBase
-- (instancetype)initWithId:(NSString *)id title:(NSString *)title text:(NSString *)text url:(NSString * _Nullable)url image:(NSString *)image tags:(NSArray<ProxityKitTag *> *)tags regionId:(NSString *)regionId regionName:(NSString *)regionName regionImage:(NSString *)regionImage usertagId:(NSString * _Nullable)usertagId usertagLabel:(NSString * _Nullable)usertagLabel usertagImage:(NSString * _Nullable)usertagImage receivedAt:(int64_t)receivedAt __attribute__((swift_name("init(id:title:text:url:image:tags:regionId:regionName:regionImage:usertagId:usertagLabel:usertagImage:receivedAt:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) ProxityKitMessageCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
-- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
-- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
-- (int64_t)component13 __attribute__((swift_name("component13()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (NSString *)component3 __attribute__((swift_name("component3()")));
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString *)component5 __attribute__((swift_name("component5()")));
-- (NSArray<ProxityKitTag *> *)component6 __attribute__((swift_name("component6()")));
-- (NSString *)component7 __attribute__((swift_name("component7()")));
-- (NSString *)component8 __attribute__((swift_name("component8()")));
-- (NSString *)component9 __attribute__((swift_name("component9()")));
-- (ProxityKitMessage *)doCopyId:(NSString *)id title:(NSString *)title text:(NSString *)text url:(NSString * _Nullable)url image:(NSString *)image tags:(NSArray<ProxityKitTag *> *)tags regionId:(NSString *)regionId regionName:(NSString *)regionName regionImage:(NSString *)regionImage usertagId:(NSString * _Nullable)usertagId usertagLabel:(NSString * _Nullable)usertagLabel usertagImage:(NSString * _Nullable)usertagImage receivedAt:(int64_t)receivedAt __attribute__((swift_name("doCopy(id:title:text:url:image:tags:regionId:regionName:regionImage:usertagId:usertagLabel:usertagImage:receivedAt:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *id __attribute__((swift_name("id")));
-@property (readonly) NSString *image __attribute__((swift_name("image")));
-@property int64_t receivedAt __attribute__((swift_name("receivedAt")));
-@property (readonly) NSString *regionId __attribute__((swift_name("regionId")));
-@property (readonly) NSString *regionImage __attribute__((swift_name("regionImage")));
-@property (readonly) NSString *regionName __attribute__((swift_name("regionName")));
-@property (readonly) NSArray<ProxityKitTag *> *tags __attribute__((swift_name("tags")));
-@property (readonly) NSString *text __attribute__((swift_name("text")));
-@property (readonly) NSString *title __attribute__((swift_name("title")));
-@property (readonly) NSString * _Nullable url __attribute__((swift_name("url")));
-@property (readonly) NSString * _Nullable usertagId __attribute__((swift_name("usertagId")));
-@property (readonly) NSString * _Nullable usertagImage __attribute__((swift_name("usertagImage")));
-@property (readonly) NSString * _Nullable usertagLabel __attribute__((swift_name("usertagLabel")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Message.Companion")))
-@interface ProxityKitMessageCompanion : ProxityKitBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) ProxityKitMessageCompanion *shared __attribute__((swift_name("shared")));
-- (id<ProxityKitKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Platform")))
-@interface ProxityKitPlatform : ProxityKitBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (ProxityKitLong * _Nullable)getFileLastModifiedId:(NSString *)id __attribute__((swift_name("getFileLastModified(id:)")));
-- (NSString *)writeImageId:(NSString *)id bytes:(ProxityKitKotlinByteArray *)bytes __attribute__((swift_name("writeImage(id:bytes:)")));
-@property (readonly) int64_t epoch __attribute__((swift_name("epoch")));
-@property (readonly) NSString *lang __attribute__((swift_name("lang")));
-@property (readonly) NSString *platform __attribute__((swift_name("platform")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ProxityClient")))
 @interface ProxityKitProxityClient : ProxityKitBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)proxityClient __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) ProxityKitProxityClient *shared __attribute__((swift_name("shared")));
-- (void)configureApiKey:(NSString *)apiKey delegate:(id<ProxityKitProxityDelegate>)delegate platform:(ProxityKitPlatform *)platform lang:(NSString * _Nullable)lang endpoint:(NSString *)endpoint __attribute__((swift_name("configure(apiKey:delegate:platform:lang:endpoint:)")));
-- (ProxityKitMessage * _Nullable)loadMessageId:(NSString *)id ts:(ProxityKitLong * _Nullable)ts __attribute__((swift_name("loadMessage(id:ts:)")));
-- (NSString * _Nullable)loadMessageAsJsonId:(NSString *)id ts:(ProxityKitLong * _Nullable)ts __attribute__((swift_name("loadMessageAsJson(id:ts:)")));
-- (NSArray<ProxityKitMessage *> *)loadMessagesSinceFrom:(int64_t)from __attribute__((swift_name("loadMessagesSince(from:)")));
-- (NSString *)loadMessagesSinceAsJsonFrom:(int64_t)from __attribute__((swift_name("loadMessagesSinceAsJson(from:)")));
+- (void)clearCache __attribute__((swift_name("clearCache()")));
+- (void)configureApiKey:(NSString *)apiKey platform:(ProxityKitProxityPlatform *)platform delegate:(id<ProxityKitProxityDelegate>)delegate __attribute__((swift_name("configure(apiKey:platform:delegate:)")));
+- (void)deleteContentId:(NSString *)id __attribute__((swift_name("deleteContent(id:)")));
+- (ProxityKitLocation * _Nullable)getLocation __attribute__((swift_name("getLocation()")));
+- (void)requestContent __attribute__((swift_name("requestContent()")));
 - (void)start __attribute__((swift_name("start()")));
 - (void)stop __attribute__((swift_name("stop()")));
 @end;
@@ -247,62 +188,59 @@ __attribute__((swift_name("ProxityClient")))
 __attribute__((swift_name("ProxityDelegate")))
 @protocol ProxityKitProxityDelegate
 @required
-- (BOOL)onFilterMessageTags:(NSArray<NSString *> * _Nullable)tags __attribute__((swift_name("onFilterMessage(tags:)")));
-- (void)onMessageMessage:(ProxityKitMessage *)message __attribute__((swift_name("onMessage(message:)")));
-- (NSString *)onWebhookId:(NSString *)id __attribute__((swift_name("onWebhook(id:)")));
+- (NSString * _Nullable)onWebhookId:(NSString *)id region:(NSString *)region __attribute__((swift_name("onWebhook(id:region:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Tag")))
-@interface ProxityKitTag : ProxityKitBase
-- (instancetype)initWithId:(NSString *)id label:(NSString *)label __attribute__((swift_name("init(id:label:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) ProxityKitTagCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (ProxityKitTag *)doCopyId:(NSString *)id label:(NSString *)label __attribute__((swift_name("doCopy(id:label:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *id __attribute__((swift_name("id")));
-@property (readonly) NSString *label __attribute__((swift_name("label")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Tag.Companion")))
-@interface ProxityKitTagCompanion : ProxityKitBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) ProxityKitTagCompanion *shared __attribute__((swift_name("shared")));
-- (id<ProxityKitKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+__attribute__((swift_name("ProxityPlatform")))
+@interface ProxityKitProxityPlatform : ProxityKitBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (ProxityKitLong * _Nullable)getFileLastModifiedPath:(NSString *)path __attribute__((swift_name("getFileLastModified(path:)")));
+- (NSString *)writeFilePath:(NSString *)path bytes:(ProxityKitKotlinByteArray *)bytes __attribute__((swift_name("writeFile(path:bytes:)")));
+@property (readonly) int64_t epoch __attribute__((swift_name("epoch")));
+@property (readonly) NSString *lang __attribute__((swift_name("lang")));
+@property (readonly) NSString *platform __attribute__((swift_name("platform")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CachedContent")))
 @interface ProxityKitCachedContent : ProxityKitBase
-- (instancetype)initWithId:(NSString *)id content:(NSString * _Nullable)content updated_at:(int64_t)updated_at received_at:(int64_t)received_at expiry:(int64_t)expiry __attribute__((swift_name("init(id:content:updated_at:received_at:expiry:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (int64_t)component3 __attribute__((swift_name("component3()")));
-- (int64_t)component4 __attribute__((swift_name("component4()")));
-- (int64_t)component5 __attribute__((swift_name("component5()")));
-- (ProxityKitCachedContent *)doCopyId:(NSString *)id content:(NSString * _Nullable)content updated_at:(int64_t)updated_at received_at:(int64_t)received_at expiry:(int64_t)expiry __attribute__((swift_name("doCopy(id:content:updated_at:received_at:expiry:)")));
+- (instancetype)initWithId:(NSString *)id content:(NSString * _Nullable)content received_at:(int64_t)received_at expired_at:(int64_t)expired_at __attribute__((swift_name("init(id:content:received_at:expired_at:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int64_t)component3 __attribute__((swift_name("component3()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int64_t)component4 __attribute__((swift_name("component4()"))) __attribute__((deprecated("use corresponding property instead")));
+- (ProxityKitCachedContent *)doCopyId:(NSString *)id content:(NSString * _Nullable)content received_at:(int64_t)received_at expired_at:(int64_t)expired_at __attribute__((swift_name("doCopy(id:content:received_at:expired_at:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable content __attribute__((swift_name("content")));
-@property (readonly) int64_t expiry __attribute__((swift_name("expiry")));
+@property (readonly) int64_t expired_at __attribute__((swift_name("expired_at")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) int64_t received_at __attribute__((swift_name("received_at")));
-@property (readonly) int64_t updated_at __attribute__((swift_name("updated_at")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetMessage")))
+@interface ProxityKitGetMessage : ProxityKitBase
+- (instancetype)initWithContent:(NSString *)content received_at:(int64_t)received_at __attribute__((swift_name("init(content:received_at:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int64_t)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
+- (ProxityKitGetMessage *)doCopyContent:(NSString *)content received_at:(int64_t)received_at __attribute__((swift_name("doCopy(content:received_at:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *content __attribute__((swift_name("content")));
+@property (readonly) int64_t received_at __attribute__((swift_name("received_at")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GetMessagesSince")))
 @interface ProxityKitGetMessagesSince : ProxityKitBase
 - (instancetype)initWithContent:(NSString *)content received_at:(int64_t)received_at __attribute__((swift_name("init(content:received_at:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (int64_t)component2 __attribute__((swift_name("component2()")));
+- (NSString *)component1 __attribute__((swift_name("component1()"))) __attribute__((deprecated("use corresponding property instead")));
+- (int64_t)component2 __attribute__((swift_name("component2()"))) __attribute__((deprecated("use corresponding property instead")));
 - (ProxityKitGetMessagesSince *)doCopyContent:(NSString *)content received_at:(int64_t)received_at __attribute__((swift_name("doCopy(content:received_at:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -339,19 +277,16 @@ __attribute__((swift_name("ProxityQueries")))
 @protocol ProxityKitProxityQueries <ProxityKitRuntimeTransacter>
 @required
 - (void)clearCache __attribute__((swift_name("clearCache()")));
-- (ProxityKitRuntimeQuery<ProxityKitCachedContent *> *)getMessageId:(NSString *)id __attribute__((swift_name("getMessage(id:)")));
-- (ProxityKitRuntimeQuery<id> *)getMessageId:(NSString *)id mapper:(id (^)(NSString *, NSString * _Nullable, ProxityKitLong *, ProxityKitLong *, ProxityKitLong *))mapper __attribute__((swift_name("getMessage(id:mapper:)")));
+- (void)deleteContentId:(NSString *)id __attribute__((swift_name("deleteContent(id:)")));
+- (ProxityKitRuntimeQuery<ProxityKitGetMessage *> *)getMessageId:(NSString *)id __attribute__((swift_name("getMessage(id:)")));
+- (ProxityKitRuntimeQuery<id> *)getMessageId:(NSString *)id mapper:(id (^)(NSString *, ProxityKitLong *))mapper __attribute__((swift_name("getMessage(id:mapper:)")));
 - (ProxityKitRuntimeQuery<ProxityKitGetMessagesSince *> *)getMessagesSinceReceived_at:(int64_t)received_at __attribute__((swift_name("getMessagesSince(received_at:)")));
 - (ProxityKitRuntimeQuery<id> *)getMessagesSinceReceived_at:(int64_t)received_at mapper:(id (^)(NSString *, ProxityKitLong *))mapper __attribute__((swift_name("getMessagesSince(received_at:mapper:)")));
-- (ProxityKitRuntimeQuery<ProxityKitLong *> *)isContentCachedId:(NSString *)id expiry:(int64_t)expiry __attribute__((swift_name("isContentCached(id:expiry:)")));
+- (ProxityKitRuntimeQuery<ProxityKitLong *> *)isContentCachedId:(NSString *)id expired_at:(int64_t)expired_at __attribute__((swift_name("isContentCached(id:expired_at:)")));
 - (ProxityKitRuntimeQuery<ProxityKitCachedContent *> *)loadContentId:(NSString *)id __attribute__((swift_name("loadContent(id:)")));
-- (ProxityKitRuntimeQuery<id> *)loadContentId:(NSString *)id mapper:(id (^)(NSString *, NSString * _Nullable, ProxityKitLong *, ProxityKitLong *, ProxityKitLong *))mapper __attribute__((swift_name("loadContent(id:mapper:)")));
+- (ProxityKitRuntimeQuery<id> *)loadContentId:(NSString *)id mapper:(id (^)(NSString *, NSString * _Nullable, ProxityKitLong *, ProxityKitLong *))mapper __attribute__((swift_name("loadContent(id:mapper:)")));
 - (void)replaceContentCachedContent:(ProxityKitCachedContent *)cachedContent __attribute__((swift_name("replaceContent(cachedContent:)")));
-- (void)updateTimestampsReceived_at:(int64_t)received_at expiry:(int64_t)expiry id:(NSString *)id __attribute__((swift_name("updateTimestamps(received_at:expiry:id:)")));
-@end;
-
-@interface ProxityKitMessage (Extensions)
-- (NSString *)toJson __attribute__((swift_name("toJson()")));
+- (void)updateTimestampsReceived_at:(int64_t)received_at expired_at:(int64_t)expired_at id:(NSString *)id __attribute__((swift_name("updateTimestamps(received_at:expired_at:id:)")));
 @end;
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
@@ -454,7 +389,7 @@ __attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
 - (void)encodeDoubleValue:(double)value __attribute__((swift_name("encodeDouble(value:)")));
 - (void)encodeEnumEnumDescriptor:(id<ProxityKitKotlinx_serialization_coreSerialDescriptor>)enumDescriptor index:(int32_t)index __attribute__((swift_name("encodeEnum(enumDescriptor:index:)")));
 - (void)encodeFloatValue:(float)value __attribute__((swift_name("encodeFloat(value:)")));
-- (id<ProxityKitKotlinx_serialization_coreEncoder>)encodeInlineInlineDescriptor:(id<ProxityKitKotlinx_serialization_coreSerialDescriptor>)inlineDescriptor __attribute__((swift_name("encodeInline(inlineDescriptor:)")));
+- (id<ProxityKitKotlinx_serialization_coreEncoder>)encodeInlineDescriptor:(id<ProxityKitKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("encodeInline(descriptor:)")));
 - (void)encodeIntValue:(int32_t)value __attribute__((swift_name("encodeInt(value:)")));
 - (void)encodeLongValue:(int64_t)value __attribute__((swift_name("encodeLong(value:)")));
 - (void)encodeNotNullMark __attribute__((swift_name("encodeNotNullMark()")));
@@ -492,7 +427,7 @@ __attribute__((swift_name("Kotlinx_serialization_coreDecoder")))
 - (double)decodeDouble __attribute__((swift_name("decodeDouble()")));
 - (int32_t)decodeEnumEnumDescriptor:(id<ProxityKitKotlinx_serialization_coreSerialDescriptor>)enumDescriptor __attribute__((swift_name("decodeEnum(enumDescriptor:)")));
 - (float)decodeFloat __attribute__((swift_name("decodeFloat()")));
-- (id<ProxityKitKotlinx_serialization_coreDecoder>)decodeInlineInlineDescriptor:(id<ProxityKitKotlinx_serialization_coreSerialDescriptor>)inlineDescriptor __attribute__((swift_name("decodeInline(inlineDescriptor:)")));
+- (id<ProxityKitKotlinx_serialization_coreDecoder>)decodeInlineDescriptor:(id<ProxityKitKotlinx_serialization_coreSerialDescriptor>)descriptor __attribute__((swift_name("decodeInline(descriptor:)")));
 - (int32_t)decodeInt __attribute__((swift_name("decodeInt()")));
 - (int64_t)decodeLong __attribute__((swift_name("decodeLong()")));
 - (BOOL)decodeNotNullMark __attribute__((swift_name("decodeNotNullMark()")));
@@ -576,8 +511,6 @@ __attribute__((swift_name("Kotlinx_serialization_coreCompositeEncoder")))
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializersModule")))
 @interface ProxityKitKotlinx_serialization_coreSerializersModule : ProxityKitBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (void)dumpToCollector:(id<ProxityKitKotlinx_serialization_coreSerializersModuleCollector>)collector __attribute__((swift_name("dumpTo(collector:)")));
 - (id<ProxityKitKotlinx_serialization_coreKSerializer> _Nullable)getContextualKClass:(id<ProxityKitKotlinKClass>)kClass typeArgumentsSerializers:(NSArray<id<ProxityKitKotlinx_serialization_coreKSerializer>> *)typeArgumentsSerializers __attribute__((swift_name("getContextual(kClass:typeArgumentsSerializers:)")));
 - (id<ProxityKitKotlinx_serialization_coreSerializationStrategy> _Nullable)getPolymorphicBaseClass:(id<ProxityKitKotlinKClass>)baseClass value:(id)value __attribute__((swift_name("getPolymorphic(baseClass:value:)")));
@@ -591,8 +524,6 @@ __attribute__((swift_name("KotlinAnnotation")))
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerialKind")))
 @interface ProxityKitKotlinx_serialization_coreSerialKind : ProxityKitBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @end;
@@ -630,7 +561,9 @@ __attribute__((swift_name("Kotlinx_serialization_coreSerializersModuleCollector"
 - (void)contextualKClass:(id<ProxityKitKotlinKClass>)kClass provider:(id<ProxityKitKotlinx_serialization_coreKSerializer> (^)(NSArray<id<ProxityKitKotlinx_serialization_coreKSerializer>> *))provider __attribute__((swift_name("contextual(kClass:provider:)")));
 - (void)contextualKClass:(id<ProxityKitKotlinKClass>)kClass serializer:(id<ProxityKitKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("contextual(kClass:serializer:)")));
 - (void)polymorphicBaseClass:(id<ProxityKitKotlinKClass>)baseClass actualClass:(id<ProxityKitKotlinKClass>)actualClass actualSerializer:(id<ProxityKitKotlinx_serialization_coreKSerializer>)actualSerializer __attribute__((swift_name("polymorphic(baseClass:actualClass:actualSerializer:)")));
-- (void)polymorphicDefaultBaseClass:(id<ProxityKitKotlinKClass>)baseClass defaultSerializerProvider:(id<ProxityKitKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultSerializerProvider __attribute__((swift_name("polymorphicDefault(baseClass:defaultSerializerProvider:)")));
+- (void)polymorphicDefaultBaseClass:(id<ProxityKitKotlinKClass>)baseClass defaultDeserializerProvider:(id<ProxityKitKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultDeserializerProvider __attribute__((swift_name("polymorphicDefault(baseClass:defaultDeserializerProvider:)")));
+- (void)polymorphicDefaultDeserializerBaseClass:(id<ProxityKitKotlinKClass>)baseClass defaultDeserializerProvider:(id<ProxityKitKotlinx_serialization_coreDeserializationStrategy> _Nullable (^)(NSString * _Nullable))defaultDeserializerProvider __attribute__((swift_name("polymorphicDefaultDeserializer(baseClass:defaultDeserializerProvider:)")));
+- (void)polymorphicDefaultSerializerBaseClass:(id<ProxityKitKotlinKClass>)baseClass defaultSerializerProvider:(id<ProxityKitKotlinx_serialization_coreSerializationStrategy> _Nullable (^)(id))defaultSerializerProvider __attribute__((swift_name("polymorphicDefaultSerializer(baseClass:defaultSerializerProvider:)")));
 @end;
 
 __attribute__((swift_name("KotlinKDeclarationContainer")))
