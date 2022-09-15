@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "proxitykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/proxity-eu/ProxityKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "c50eff2ac15be4a779f5e202cc3a4fb8b0158021"
+      }
+    }
+  ],
+  "version" : 2
+}
